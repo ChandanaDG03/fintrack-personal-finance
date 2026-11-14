@@ -12,23 +12,22 @@ FinTrack is a simple personal finance management tool implemented in Python. It 
 - Automated **unit tests** to validate core functionality
 
 **Key Results (from demo output):**  
-- **Total transactions:** *e.g.* 68 (for 4 months, including salary + expenses)  
-- **Total Income:** \$16,000 (4 months × \$4,000 monthly)  
-- **Total Expense:** (sum of all random expenses)  
-- **Net Balance:** (income – expense)  
-- **Savings Rate:** (net balance as % of income)  
-- **Expense by Category:** breakdown like `{ 'food': 1200.00, 'rent': 4800.00, 'transport': 500.00, ... }` sorted by amount.  
-- **Budget Status (current month):** a table with columns `category | limit | spent | remaining | used_pct | over_budget`. For example:
+- **Total transactions:** 65 (across 4 months, including salary + expenses)  
+- **Total Income:** $16,000.00 (4 months × $4,000.00 monthly)  
+- **Total Expense:** $3,818.66  
+- **Net Balance:** $12,181.34  
+- **Savings Rate:** 76.1%  
+- **Expense by Category:** `{'rent': 1748.47, 'utilities': 516.86, 'transport': 455.44, 'shopping': 447.77, 'food': 378.89, 'entertainment': 271.23}`  
+- **Budget Status (current month):**  
 
-  | category      | limit | spent | remaining | used_pct | over_budget |
-  |--------------|------:|------:|---------:|--------:|-----------:|
-  | **Food**       | 400.0 | 150.0 | 250.0    | 37.5%   | False      |
-  | **Entertainment** | 150.0 | 200.0 | -50.0    | 133.3%  | True       |
-  | **Shopping**   | 200.0 |  80.0 | 120.0    | 40.0%   | False      |
+  | category          | limit | spent  | remaining | used_pct | over_budget |
+  |-------------------|------:|-------:|----------:|---------:|------------:|
+  | **Entertainment** | 150.0 |  55.16 |     94.84 |    36.8% |       False |
+  | **Food**          | 400.0 |  85.39 |    314.61 |    21.3% |       False |
+  | **Shopping**      | 200.0 | 153.97 |     46.03 |    77.0% |       False |
 
-  (Numbers above are illustrative; actual values come from the random demo.)
 
 **How to Run:**  
-1. Open `fintrack_analyzer.ipynb` in **Google Colab** or **Jupyter Notebook**.
+1. Open `Personal_Finance_Tracker.ipynb` in **Google Colab** or **Jupyter Notebook**.
 2. Install dependencies if running locally: `pip install pandas matplotlib`
 3. Run all cells from top to bottom to initialize the SQLite database, seed sample data, view budget reports, and execute the unit test suite.
